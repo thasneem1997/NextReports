@@ -3,7 +3,7 @@ import ReportsData from "./data/ReportsData";
 export default function Home() {
   return (
     <main>
-     <ReportsDialog ReportsData={reports}/>
+     <ReportsDialog reports={ReportsData}/>
     </main>
   );
 }
