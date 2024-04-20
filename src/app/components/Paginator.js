@@ -9,10 +9,10 @@ import {
 
 
 
-function Paginator({currentpage,setcurrentpage,totalpages,rowsPerPage,handleRowsPerPageChange}) {
+function Paginator({currentpage,setcurrentpage,totalpages,reportsperpage,handleRowsPerPageChange}) {
    
 
-  return (
+  return (//ui of pagination
     <div className='flex mt-5 text-gray-400 justify-center '>
     <FontAwesomeIcon icon={faArrowLeft} style={{marginTop:'8px'}} className="w-5 h-5 "/>
 
@@ -45,11 +45,11 @@ function Paginator({currentpage,setcurrentpage,totalpages,rowsPerPage,handleRows
       
         <select className='border-solid border-2 p-1	ml-2 rounded'
           id="rows-per-page"
-          value={rowsPerPage}
+          value={reportsperpage}
           onChange={handleRowsPerPageChange}
         >
           <option value={5}>5</option>
-          <option value={10}>10</option>
+          <option value={10}>8</option>
           <option value={15}>15</option>
           <option value={20}>20</option>
         
