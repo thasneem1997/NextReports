@@ -14,11 +14,11 @@ function Paginator({currentpage,setcurrentpage,totalpages,reportsperpage,handleR
 
   return (//ui of pagination
     <div className='flex mt-5 text-gray-400 justify-center '>
-    <FontAwesomeIcon icon={faArrowLeft} style={{marginTop:'8px'}} className="w-5 h-5 "/>
+    <FontAwesomeIcon icon={faArrowLeft} style={{marginTop:'8px'}} className="w-5 h-5 "  onClick={() => setcurrentpage(currentpage - 1)}
+        disabled={currentpage === 1} />
 
-      <button 
-        onClick={() => setcurrentpage(currentpage - 1)}
-        disabled={currentpage === 1} className='pl-3 mt-1'
+      <button className='pl-3 mt-1'
+       
       >
         Previous
       </button>
@@ -34,12 +34,12 @@ function Paginator({currentpage,setcurrentpage,totalpages,reportsperpage,handleR
         </button>
       ))}
       <button className='pl-3 mt-1'
-        onClick={() => setcurrentpage(currentpage + 1)}
-        disabled={currentpage === totalpages} 
+        
       >
         Next
       </button>
-      <FontAwesomeIcon icon={faArrowRight} style={{marginTop:'8px'}} className="w-5 h-5 ml-2"/>
+      <FontAwesomeIcon icon={faArrowRight} style={{marginTop:'8px'}} className="w-5 h-5 ml-2" onClick={() => setcurrentpage(currentpage + 1)}
+        disabled={currentpage === totalpages} />
       <p className='pl-3 mt-1 ml-20'>Rows Per Page</p>
       <p>
       

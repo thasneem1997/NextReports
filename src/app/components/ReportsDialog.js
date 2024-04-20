@@ -19,7 +19,6 @@ function ReportsDialog({ reports }) {
   const [currentpage, setcurrentpage] = useState(1);
   const [reportsperpage, setreportsperpage] = useState(5);
   const [filteredReports, setFilteredReports] = useState(reports);
-  // const [isFiltered, setIsFiltered] = useState(false);
 
   const FilterAll = () => {
     setFilteredReports(reports);
