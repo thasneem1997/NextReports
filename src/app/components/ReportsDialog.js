@@ -72,7 +72,10 @@ function ReportsDialog({ reports }) {
       </div>
       {currentreports.map((report, index) => (
         <div key={index} className="grid grid-cols-3 gap-4 p-2 text-slate-600	">
-          <span>{report.date}</span>
+          <h1>
+            {report.date}
+            <span className="text-slate-400 block">{report.time}</span>
+          </h1>
           <span>{report.name}</span>
           <FontAwesomeIcon
             icon={faFileDownload}
